@@ -69,8 +69,24 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
             UIDeviceOrientationDidChangeNotification, object: nil)
         
             detectNumberPerRow()
+        
+        
+           getNewSkin()
+        
+
     }
 
+    
+    
+    func getNewSkin () {
+        let currentNavigationBar = self.navigationController?.navigationBar
+        let currentTabBar =  self.tabBarController?.tabBar
+        
+        currentNavigationBar?.getNewSkin()
+        currentTabBar?.getNewSkin()
+    }
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         detectShowOrHideBottomBar()
@@ -315,6 +331,9 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifier, forIndexPath: indexPath) as! PhotoCell
        let urlRequest = NSURLRequest(URL: self.photoURLs[indexPath.row])
+    
+    
+     print (" \(indexPath)");
     
         // Get photo from Flickr server
         NSURLSession.sharedSession().dataTaskWithRequest(urlRequest) { (data,response, error) -> Void in

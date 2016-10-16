@@ -72,6 +72,9 @@ class NearbyViewController: UICollectionViewController, UICollectionViewDelegate
         locationManager.distanceFilter = 300
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        getNewSkin()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -106,6 +109,12 @@ class NearbyViewController: UICollectionViewController, UICollectionViewDelegate
 
 
 // MARK: - Helper functions
+    
+    func getNewSkin () {
+        let currentNavigationBar = self.navigationController?.navigationBar
+        currentNavigationBar?.getNewSkin()
+    }
+    
     
     /**
     Indicates on Navigation Bar how many pages was loaded from Flickr
@@ -177,6 +186,8 @@ class NearbyViewController: UICollectionViewController, UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifier, forIndexPath: indexPath) as! PhotoCell
         let urlRequest = NSURLRequest(URL: self.photoURLs[indexPath.row])
+        
+        print (" \(indexPath)");
         
        // Get photo from Flickr server
         NSURLSession.sharedSession().dataTaskWithRequest(urlRequest) { (data,response, error) -> Void in

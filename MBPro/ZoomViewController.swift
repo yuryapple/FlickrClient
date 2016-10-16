@@ -39,8 +39,18 @@ class ZoomViewController: UIViewController, UIScrollViewDelegate {
                 self.zoomViewPhoto.image = image
             })
             }.resume()
+        
+        getNewSkin()
     }
 
+    
+
+    
+    func getNewSkin () {
+        let currentNavigationBar = self.navigationController?.navigationBar
+        currentNavigationBar?.getNewSkin()
+    }
+    
     
     private func getUrlRequestForBigPhoto () -> NSURLRequest {
      let urlStringForBigPhoto = urlStringForSmallPhoto.stringByReplacingOccurrencesOfString("_m.", withString: "_b.")

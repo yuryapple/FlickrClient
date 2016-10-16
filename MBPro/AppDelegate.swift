@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set global variable
         ManagerGlobalVariable.sharedInstance.itemsPerRow = 3
         
+        ManagerGlobalVariable.sharedInstance.currentVisitot = GeneratorVisitorSky().genetateVisitor()
+        
         
         return true
     }

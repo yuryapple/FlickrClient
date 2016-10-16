@@ -10,6 +10,15 @@
 		5B2892A6BFD6D52B9CB19DF5 /* Pods_MBPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A800D0D306B70267805F17 /* Pods_MBPro.framework */; };
 		F10507921D9E62AF00DB7BDF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10507911D9E62AF00DB7BDF /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
 		F109687D1DA429A1006CE16B /* ManagerGlobalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCD01DB237F600C6B48D /* VisitorKhaki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCD41DB2415800C6B48D /* ExtNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD31DB2415800C6B48D /* ExtNavigationBar.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCD61DB243BF00C6B48D /* GetSkinProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD51DB243BF00C6B48D /* GetSkinProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCD81DB2447000C6B48D /* ExtTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCDA1DB2455D00C6B48D /* VisitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD91DB2455D00C6B48D /* VisitorProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCDC1DB2472900C6B48D /* VisitorSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCDB1DB2472900C6B48D /* VisitorSky.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCDF1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCDE1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorSky.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift */; settings = {ASSET_TAGS = (); }; };
 		F10B851D1DA189C300E24851 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B851C1DA189C300E24851 /* NearbyViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F11D930C1DA8C01600F10FD8 /* ManagerGlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */; settings = {ASSET_TAGS = (); }; };
 		F11D930E1DA9212D00F10FD8 /* ZoomViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */; settings = {ASSET_TAGS = (); }; };
@@ -27,6 +36,15 @@
 		896CF8AD503C222B815B6904 /* Pods-MBPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBPro/Pods-MBPro.debug.xcconfig"; sourceTree = "<group>"; };
 		F10507911D9E62AF00DB7BDF /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerGlobalValue.swift; sourceTree = "<group>"; };
+		F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorKhaki.swift; sourceTree = "<group>"; };
+		F10ADCD31DB2415800C6B48D /* ExtNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtNavigationBar.swift; sourceTree = "<group>"; };
+		F10ADCD51DB243BF00C6B48D /* GetSkinProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSkinProtocol.swift; sourceTree = "<group>"; };
+		F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtTabBar.swift; sourceTree = "<group>"; };
+		F10ADCD91DB2455D00C6B48D /* VisitorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorProtocol.swift; sourceTree = "<group>"; };
+		F10ADCDB1DB2472900C6B48D /* VisitorSky.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorSky.swift; sourceTree = "<group>"; };
+		F10ADCDE1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorProtocol.swift; sourceTree = "<group>"; };
+		F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorSky.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorSky.swift; sourceTree = "<group>"; };
+		F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorKhaki.swift; sourceTree = "<group>"; };
 		F10B851C1DA189C300E24851 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerGlobalFunction.swift; sourceTree = "<group>"; };
 		F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewPhoto.swift; sourceTree = "<group>"; };
@@ -61,10 +79,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F10ADCD11DB23FE200C6B48D /* Visitors */ = {
+			isa = PBXGroup;
+			children = (
+				F10ADCD91DB2455D00C6B48D /* VisitorProtocol.swift */,
+				F10ADCDB1DB2472900C6B48D /* VisitorSky.swift */,
+				F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */,
+			);
+			name = Visitors;
+			path = MBPro;
+			sourceTree = "<group>";
+		};
+		F10ADCD21DB2401B00C6B48D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F10ADCD51DB243BF00C6B48D /* GetSkinProtocol.swift */,
+				F10ADCD31DB2415800C6B48D /* ExtNavigationBar.swift */,
+				F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */,
+			);
+			name = Extension;
+			path = MBPro;
+			sourceTree = "<group>";
+		};
+		F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitor */ = {
+			isa = PBXGroup;
+			children = (
+				F10ADCDE1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift */,
+				F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorSky.swift */,
+				F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift */,
+			);
+			name = GeneratorVisitor;
+			sourceTree = "<group>";
+		};
 		F174A60A1D9D31D90077CD68 = {
 			isa = PBXGroup;
 			children = (
 				F174A6151D9D31D90077CD68 /* FCliet */,
+				F10ADCD11DB23FE200C6B48D /* Visitors */,
+				F10ADCD21DB2401B00C6B48D /* Extension */,
 				F174A6141D9D31D90077CD68 /* Products */,
 				43F06EC359D678E2EC3501DA /* Pods */,
 				F1CE6D53B7D5CCE077305DB5 /* Frameworks */,
@@ -94,6 +146,7 @@
 				F174A61D1D9D31D90077CD68 /* Assets.xcassets */,
 				F174A61F1D9D31D90077CD68 /* LaunchScreen.storyboard */,
 				F174A6221D9D31D90077CD68 /* Info.plist */,
+				F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitor */,
 			);
 			name = FCliet;
 			path = MBPro;
@@ -229,10 +282,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F10ADCDC1DB2472900C6B48D /* VisitorSky.swift in Sources */,
 				F11D930E1DA9212D00F10FD8 /* ZoomViewPhoto.swift in Sources */,
+				F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorSky.swift in Sources */,
+				F10ADCDF1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift in Sources */,
+				F10ADCD41DB2415800C6B48D /* ExtNavigationBar.swift in Sources */,
 				F109687D1DA429A1006CE16B /* ManagerGlobalValue.swift in Sources */,
+				F10ADCDA1DB2455D00C6B48D /* VisitorProtocol.swift in Sources */,
+				F10ADCD81DB2447000C6B48D /* ExtTabBar.swift in Sources */,
 				F174A6191D9D31D90077CD68 /* SearchViewController.swift in Sources */,
+				F10ADCD61DB243BF00C6B48D /* GetSkinProtocol.swift in Sources */,
 				F10507921D9E62AF00DB7BDF /* PhotoCell.swift in Sources */,
+				F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift in Sources */,
+				F10ADCD01DB237F600C6B48D /* VisitorKhaki.swift in Sources */,
 				F11D930C1DA8C01600F10FD8 /* ManagerGlobalFunction.swift in Sources */,
 				F10B851D1DA189C300E24851 /* NearbyViewController.swift in Sources */,
 				F174A6171D9D31D90077CD68 /* AppDelegate.swift in Sources */,

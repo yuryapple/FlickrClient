@@ -24,4 +24,5 @@ class ManagerGlobalVariable {
         return String(itemsPerRow * 5)
     }
     
+    var currentVisitot: VisitorProtocol!
 }
