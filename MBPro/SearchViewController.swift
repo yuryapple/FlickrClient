@@ -11,17 +11,32 @@ import MBProgressHUD
 import FlickrKit
 
 
+struct FlickrPhotoInfo {
+    var photoURL : NSURL!
+    var photoID: String!
+    var farm : Int!
+    var server : String!
+    var secret : String!
+    var avaliableOriginalSize : Bool!
+}
+
+
+
 class SearchViewController: UICollectionViewController , UITextFieldDelegate , UICollectionViewDelegateFlowLayout {
     
 // MARK: - Properties
     ///  This array stores URLs of small photo witch were loaded from Flickr.
-    private  var photoURLs: [NSURL]! = []
+    private  var PhotoInfoArray: [FlickrPhotoInfo]! = []
+    
+    ///  This array stores URLs of small photo witch were loaded from Flickr.
+    //private  var photoIDs: [String]! = []
+    
     
     /// This array will be stored total value
     private  var multipleSegment: [String] = []
     
     /// Reuse identifier for CollectionViewCell SearchViewController.
-    private let reuseIdentifier = "FlickrCellForSearch"
+   // private let reuseIdentifier = "FlickrCellForSearch"
     
     /// Text for displaying on Search field
     private var searchText = ""
@@ -60,6 +75,11 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     @IBOutlet weak var segmentControl: UISegmentedControl!
    
     
+
+    
+   
+    
+    
 // MARK: - Native functions of UICollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,21 +89,33 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
             UIDeviceOrientationDidChangeNotification, object: nil)
         
             detectNumberPerRow()
+            getNewSkin()
         
-        
-           getNewSkin()
-        
-
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "getNewSkin",
+            name: BuilderDidSetGlobalValues,
+            object: nil)
     }
 
     
     
     func getNewSkin () {
+        
+        print("get new ")
+        
         let currentNavigationBar = self.navigationController?.navigationBar
         let currentTabBar =  self.tabBarController?.tabBar
+       
+        
         
         currentNavigationBar?.getNewSkin()
         currentTabBar?.getNewSkin()
+        PhotoCell.getNewSkin()
+            
+        self.collectionView?.reloadData()
+
+        
+        
     }
     
     
@@ -191,7 +223,8 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
         let alertController = UIAlertController(title: "Error", message: errorText, preferredStyle: .Alert)
         let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: {(action:UIAlertAction!) -> Void in
                 self.activateSearchFild!()
-                self.photoURLs.removeAll()
+                self.PhotoInfoArray.removeAll()
+             //   self.photoIDs.removeAll()
                 self.collectionView?.reloadData()
             })
         alertController.addAction(defaultAction)
@@ -203,7 +236,7 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     Indicates on Navigation Bar how many pages was loaded from Flickr
     */
     private func showNumberOfLoadedPages() {
-        if self.photoURLs.isEmpty {
+        if self.PhotoInfoArray.isEmpty {
             self.labelForLoadedPages.text =  ""
         } else {
             let height = self.collectionView?.frame.size.height
@@ -244,36 +277,62 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
         showActivityIndicator()
 
         // Prepare for saerch
-        let search = ManagerGlobalFunction.sharedInstance.getFlickrPhotosSearch(tag: multipleSegment[0], text: multipleSegment[1], long: nil, lat: nil, radius: nil, page: String(pageNumber))
+        let search = AdapterRequest.sharedInstance.getFlickrPhotosSearch(tag: multipleSegment[0], text: multipleSegment[1], long: nil, lat: nil, radius: nil, page: String(pageNumber))
         
-        FlickrKit.sharedFlickrKit().call(search) { (response, error) -> Void in
+        AdapterRequest.sharedInstance.getNewPortionURLsFromFlickrServer(search) {(response, error) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if (response != nil) {
-                    if self.pageNumber == 1 {
-                        //  Remove old URL
-                        self.photoURLs.removeAll()
-                    }
-                    // Pull out the photo urls from the results
-                    let topPhotos = response["photos"] as! [NSObject: AnyObject]
-                    let photoArray = topPhotos["photo"] as! [[NSObject: AnyObject]]
-                    
-                    for photoDictionary in photoArray {
-                        // Get URL of photo
-                        let photoURL = FlickrKit.sharedFlickrKit().photoURLForSize(FKPhotoSizeSmall240, fromPhotoDictionary: photoDictionary)
-                        self.photoURLs.append(photoURL)
-                    }
-                    // Reload for show new photos
-                    self.collectionView?.reloadData()
-                    self.hideActivityIndicator()
-                    self.showNumberOfLoadedPages()
+                if let er = error {
+                    self.showError (er)
                 } else {
-                    //We have some proublem
-                    self.hideActivityIndicator()
-                    self.showAlertWithError(error.localizedDescription)
+                    self.fillPhotoInfoArray(response)
                 }
             })
         }
      }
+    
+    
+    
+    func showError (error: NSError) {
+        //We have some proublem
+        self.hideActivityIndicator()
+        self.showAlertWithError(error.localizedDescription)
+    }
+    
+
+    func fillPhotoInfoArray (response: AnyObject) {
+            if self.pageNumber == 1 {
+                //  Remove old URL
+                self.PhotoInfoArray.removeAll()
+            }
+            // Pull out the photo urls from the results
+            let topPhotos = response["photos"] as! [NSObject: AnyObject]
+            let photoArray = topPhotos["photo"] as! [[NSObject: AnyObject]]
+            
+            for photoDictionary in photoArray {
+                // Get URL of photo
+                var photoInf = FlickrPhotoInfo()
+                
+                photoInf.photoURL = AdapterRequest.sharedInstance.getURLSmallPhotoFromFlickrServer(photoDictionary)
+                photoInf.photoID = String(photoDictionary["id"]!)
+                photoInf.farm = photoDictionary["farm"] as! Int
+                photoInf.server = String(photoDictionary["server"]!)
+                photoInf.secret = String(photoDictionary["secret"]!)
+                (photoInf.avaliableOriginalSize = (photoDictionary["url_o"]) != nil)
+                
+                
+                
+                
+                self.PhotoInfoArray.append(photoInf)
+                
+            }
+            // Reload for show new photos
+            self.collectionView?.reloadData()
+            self.hideActivityIndicator()
+            self.showNumberOfLoadedPages()
+    }
+    
+    
+    
     
     
 // MARK: - UITextFieldDelegate
@@ -286,13 +345,8 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
             //Recover initial text
             textField.textColor = UIColor.grayColor()
             textField.text = self.searchText
-      
-            // 
-          //  if self.photoURLs.isEmpty {
-           //     self.labelForLoadedPages.text =  ""
-           // } else {
-               self.showNumberOfLoadedPages()
-          //  }
+                
+            self.showNumberOfLoadedPages()
         }
         
         // Freez collection view until Search fild is active
@@ -325,25 +379,17 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     }
     
   override  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.photoURLs.count
+        return self.PhotoInfoArray.count
     }
 
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.reuseIdentifier, forIndexPath: indexPath) as! PhotoCell
-       let urlRequest = NSURLRequest(URL: self.photoURLs[indexPath.row])
+       let cell = collectionView.dequeueReusableCellWithReuseIdentifier(PhotoCell.reuseIdentifier, forIndexPath: indexPath) as! PhotoCell
+       let urlRequest = NSURLRequest(URL: self.PhotoInfoArray[indexPath.row].photoURL)
+       let avaliableOriginalSize  =  self.PhotoInfoArray[indexPath.row].avaliableOriginalSize
     
+       AdapterRequest.sharedInstance.getSmallPhotoForCell(urlRequest , cell: cell , avaliableOriginSize: avaliableOriginalSize)
     
-     print (" \(indexPath)");
-    
-        // Get photo from Flickr server
-        NSURLSession.sharedSession().dataTaskWithRequest(urlRequest) { (data,response, error) -> Void in
-            let image = UIImage(data: data!)
-        // Show photo on UI element. So we need mainQueue
-        NSOperationQueue.mainQueue().addOperationWithBlock({
-            cell.imageView.image = image
-        })
-        }.resume()
-    
+
        return cell
     }
     
@@ -365,8 +411,15 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
             indexPath = collectionView?.indexPathForCell(cell),
             ZViewController = segue.destinationViewController as? ZoomViewController {
                // Get string of URL  from  Array
-               let urlString = self.photoURLs[indexPath.row].absoluteString
+               let urlString = self.PhotoInfoArray[indexPath.row].photoURL.absoluteString
+               print (" \(urlString)")
+                
+                let  photoI = self.PhotoInfoArray[indexPath.row].photoID
+     
+                
                ZViewController.urlStringForSmallPhoto = urlString
+
+               ZViewController.photoId = String(photoI)
             }
     }
     

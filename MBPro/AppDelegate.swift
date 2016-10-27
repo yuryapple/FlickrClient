@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        self.window?.tintColor = UIColor.blueColor()
+        self.window?.tintColor = UIColor.blackColor()
         
         let apiKey = "348ea26ca45d5f9d3da7fff4822a7fd1";
         let secret = "471cc96b04e60f27";
@@ -28,12 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set global variable
         ManagerGlobalVariable.sharedInstance.itemsPerRow = 3
         
-        ManagerGlobalVariable.sharedInstance.currentVisitot = GeneratorVisitorSky().genetateVisitor()
-        
+        BuilderGlobalSettings.sharedInstance.setGlobalDefaultValue()
         
         return true
     }
-
+ 
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

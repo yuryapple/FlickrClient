@@ -11,4 +11,5 @@ import UIKit
 protocol VisitorProtocol {
     func visitNavigationBar (currentNavigationBar : UINavigationBar)
     func visitTabBar (currentTabBar : UITabBar)
+    func visitImageSize (inout currentImageView : UIImage, inout reuseIdentifier : String)
 }

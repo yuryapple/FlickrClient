@@ -9,8 +9,12 @@
 import UIKit
 
 class VisitorSkinSky: VisitorProtocol {
+
+    /// Reuse identifier for CollectionViewCell SearchViewController.
+    private let reuseIdentifierCell = "FlickrCellForSearchAluminium"
     
-    let  image = UIImage(named: "Sky.png")
+   private  let  image = UIImage(named: "Aluminium.png")
+   private  let  imageSize = UIImage(named: "OriginalSizeAluminium.png")
     
     
     func visitNavigationBar (currentNavigationBar : UINavigationBar) {
@@ -22,4 +26,11 @@ class VisitorSkinSky: VisitorProtocol {
         currentTabBar.clipsToBounds = true
         currentTabBar.backgroundImage = image
     }
+    
+    func visitImageSize (inout currentImageView : UIImage , inout reuseIdentifier : String) {
+        currentImageView = imageSize!
+        reuseIdentifier = reuseIdentifierCell
+    }
+    
+    
 }

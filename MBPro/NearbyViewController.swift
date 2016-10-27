@@ -146,9 +146,9 @@ class NearbyViewController: UICollectionViewController, UICollectionViewDelegate
     */
     func loadUrlPhotos() {
         // Prepare for saerch
-        let search = ManagerGlobalFunction.sharedInstance.getFlickrPhotosSearch( tag: nil, text: nil, long: long, lat: lat, radius: nearbyKilometer.title, page: String(pageNumber))
+        let search = AdapterRequest.sharedInstance.getFlickrPhotosSearch( tag: nil, text: nil, long: long, lat: lat, radius: nearbyKilometer.title, page: String(pageNumber))
         
-        FlickrKit.sharedFlickrKit().call(search) { (response, error) -> Void in
+        FlickrKit.sharedFlickrKit().call(search as! FKFlickrPhotosSearch) { (response, error) -> Void in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if (response != nil) {
                     self.showActivityIndicator()

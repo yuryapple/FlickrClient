@@ -10,7 +10,7 @@ import UIKit
 
 extension UITabBar: GetSkinProtocol {
     func getNewSkin () {
-        let currentVisitor =  ManagerGlobalVariable.sharedInstance.currentVisitot
-        currentVisitor.visitTabBar(self)
+        let currentSkinVisitor =  ManagerGlobalVariable.sharedInstance.currentSkinVisitor
+        currentSkinVisitor.visitTabBar(self)
     }
 }

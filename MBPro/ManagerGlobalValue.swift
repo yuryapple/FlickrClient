@@ -21,8 +21,10 @@ class ManagerGlobalVariable {
     var itemsPerRow: CGFloat = 3
     /// How many photos wil be download per request. read-only competed property
     var per_page: String {
-        return String(itemsPerRow * 5)
+        return String(Int(itemsPerRow * 5))
     }
     
-    var currentVisitot: VisitorProtocol!
+    var currentSkinVisitor: VisitorProtocol!
+    
+    var currentDriverForFlickrServer: DriverFlickrProtocol!
 }

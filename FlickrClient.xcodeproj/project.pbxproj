@@ -22,6 +22,13 @@
 		F10B851D1DA189C300E24851 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B851C1DA189C300E24851 /* NearbyViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F11D930C1DA8C01600F10FD8 /* ManagerGlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */; settings = {ASSET_TAGS = (); }; };
 		F11D930E1DA9212D00F10FD8 /* ZoomViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */; settings = {ASSET_TAGS = (); }; };
+		F15E762F1DB4E72400937D79 /* AdapterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E762E1DB4E72400937D79 /* AdapterRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		F15E76321DB4EA0400937D79 /* DriverFlickrKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E76311DB4EA0400937D79 /* DriverFlickrKit.swift */; settings = {ASSET_TAGS = (); }; };
+		F15E76341DB4EA2100937D79 /* DriverFlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E76331DB4EA2100937D79 /* DriverFlickrAPI.swift */; settings = {ASSET_TAGS = (); }; };
+		F15E76361DB4EA8800937D79 /* DriverFlickrProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E76351DB4EA8800937D79 /* DriverFlickrProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		F161C9F31DBA10A9007B938B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F161C9F21DBA10A9007B938B /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
+		F161C9F61DBA444C007B938B /* BuilderSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C9F51DBA444C007B938B /* BuilderSettingsProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		F161C9F81DBA45AF007B938B /* BuilderGlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C9F71DBA45AF007B938B /* BuilderGlobalSettings.swift */; settings = {ASSET_TAGS = (); }; };
 		F174A6171D9D31D90077CD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174A6161D9D31D90077CD68 /* AppDelegate.swift */; };
 		F174A6191D9D31D90077CD68 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174A6181D9D31D90077CD68 /* SearchViewController.swift */; };
 		F174A61C1D9D31D90077CD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174A61A1D9D31D90077CD68 /* Main.storyboard */; };
@@ -48,6 +55,13 @@
 		F10B851C1DA189C300E24851 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerGlobalFunction.swift; sourceTree = "<group>"; };
 		F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewPhoto.swift; sourceTree = "<group>"; };
+		F15E762E1DB4E72400937D79 /* AdapterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterRequest.swift; sourceTree = "<group>"; };
+		F15E76311DB4EA0400937D79 /* DriverFlickrKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverFlickrKit.swift; sourceTree = "<group>"; };
+		F15E76331DB4EA2100937D79 /* DriverFlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverFlickrAPI.swift; sourceTree = "<group>"; };
+		F15E76351DB4EA8800937D79 /* DriverFlickrProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverFlickrProtocol.swift; sourceTree = "<group>"; };
+		F161C9F21DBA10A9007B938B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		F161C9F51DBA444C007B938B /* BuilderSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderSettingsProtocol.swift; sourceTree = "<group>"; };
+		F161C9F71DBA45AF007B938B /* BuilderGlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderGlobalSettings.swift; sourceTree = "<group>"; };
 		F174A6131D9D31D90077CD68 /* FlickrClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F174A6161D9D31D90077CD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F174A6181D9D31D90077CD68 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +101,6 @@
 				F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */,
 			);
 			name = Visitors;
-			path = MBPro;
 			sourceTree = "<group>";
 		};
 		F10ADCD21DB2401B00C6B48D /* Extension */ = {
@@ -98,7 +111,6 @@
 				F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */,
 			);
 			name = Extension;
-			path = MBPro;
 			sourceTree = "<group>";
 		};
 		F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitor */ = {
@@ -111,12 +123,63 @@
 			name = GeneratorVisitor;
 			sourceTree = "<group>";
 		};
+		F10ADCE41DB3704700C6B48D /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+				F174A6181D9D31D90077CD68 /* SearchViewController.swift */,
+			);
+			name = SearchTab;
+			sourceTree = "<group>";
+		};
+		F10ADCE51DB3706F00C6B48D /* NearbyTab */ = {
+			isa = PBXGroup;
+			children = (
+				F10B851C1DA189C300E24851 /* NearbyViewController.swift */,
+			);
+			name = NearbyTab;
+			sourceTree = "<group>";
+		};
+		F10ADCE61DB3757000C6B48D /* AdapterRequest */ = {
+			isa = PBXGroup;
+			children = (
+				F15E76351DB4EA8800937D79 /* DriverFlickrProtocol.swift */,
+				F15E762E1DB4E72400937D79 /* AdapterRequest.swift */,
+				F15E76301DB4E98600937D79 /* DriversForFlickr */,
+			);
+			name = AdapterRequest;
+			sourceTree = "<group>";
+		};
+		F15E76301DB4E98600937D79 /* DriversForFlickr */ = {
+			isa = PBXGroup;
+			children = (
+				F15E76311DB4EA0400937D79 /* DriverFlickrKit.swift */,
+				F15E76331DB4EA2100937D79 /* DriverFlickrAPI.swift */,
+			);
+			name = DriversForFlickr;
+			sourceTree = "<group>";
+		};
+		F15E76371DB63A8A00937D79 /* ZoomPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				F1BCBA541D9FB5FD000FF636 /* ZoomViewController.swift */,
+				F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */,
+			);
+			name = ZoomPhoto;
+			sourceTree = "<group>";
+		};
+		F161C9F41DBA43A1007B938B /* BuilderGlobalSettings */ = {
+			isa = PBXGroup;
+			children = (
+				F161C9F51DBA444C007B938B /* BuilderSettingsProtocol.swift */,
+				F161C9F71DBA45AF007B938B /* BuilderGlobalSettings.swift */,
+			);
+			name = BuilderGlobalSettings;
+			sourceTree = "<group>";
+		};
 		F174A60A1D9D31D90077CD68 = {
 			isa = PBXGroup;
 			children = (
 				F174A6151D9D31D90077CD68 /* FCliet */,
-				F10ADCD11DB23FE200C6B48D /* Visitors */,
-				F10ADCD21DB2401B00C6B48D /* Extension */,
 				F174A6141D9D31D90077CD68 /* Products */,
 				43F06EC359D678E2EC3501DA /* Pods */,
 				F1CE6D53B7D5CCE077305DB5 /* Frameworks */,
@@ -135,18 +198,22 @@
 			isa = PBXGroup;
 			children = (
 				F174A6161D9D31D90077CD68 /* AppDelegate.swift */,
-				F174A6181D9D31D90077CD68 /* SearchViewController.swift */,
-				F10B851C1DA189C300E24851 /* NearbyViewController.swift */,
+				F10ADCE41DB3704700C6B48D /* SearchTab */,
+				F10ADCE51DB3706F00C6B48D /* NearbyTab */,
+				F15E76371DB63A8A00937D79 /* ZoomPhoto */,
+				F161C9F41DBA43A1007B938B /* BuilderGlobalSettings */,
 				F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */,
 				F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */,
-				F1BCBA541D9FB5FD000FF636 /* ZoomViewController.swift */,
-				F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */,
 				F10507911D9E62AF00DB7BDF /* PhotoCell.swift */,
+				F161C9F21DBA10A9007B938B /* Settings.bundle */,
 				F174A61A1D9D31D90077CD68 /* Main.storyboard */,
 				F174A61D1D9D31D90077CD68 /* Assets.xcassets */,
 				F174A61F1D9D31D90077CD68 /* LaunchScreen.storyboard */,
 				F174A6221D9D31D90077CD68 /* Info.plist */,
+				F10ADCE61DB3757000C6B48D /* AdapterRequest */,
 				F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitor */,
+				F10ADCD11DB23FE200C6B48D /* Visitors */,
+				F10ADCD21DB2401B00C6B48D /* Extension */,
 			);
 			name = FCliet;
 			path = MBPro;
@@ -221,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F161C9F31DBA10A9007B938B /* Settings.bundle in Resources */,
 				F174A6211D9D31D90077CD68 /* LaunchScreen.storyboard in Resources */,
 				F174A61E1D9D31D90077CD68 /* Assets.xcassets in Resources */,
 				F174A61C1D9D31D90077CD68 /* Main.storyboard in Resources */,
@@ -285,6 +353,7 @@
 				F10ADCDC1DB2472900C6B48D /* VisitorSky.swift in Sources */,
 				F11D930E1DA9212D00F10FD8 /* ZoomViewPhoto.swift in Sources */,
 				F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorSky.swift in Sources */,
+				F15E76361DB4EA8800937D79 /* DriverFlickrProtocol.swift in Sources */,
 				F10ADCDF1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift in Sources */,
 				F10ADCD41DB2415800C6B48D /* ExtNavigationBar.swift in Sources */,
 				F109687D1DA429A1006CE16B /* ManagerGlobalValue.swift in Sources */,
@@ -296,8 +365,13 @@
 				F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift in Sources */,
 				F10ADCD01DB237F600C6B48D /* VisitorKhaki.swift in Sources */,
 				F11D930C1DA8C01600F10FD8 /* ManagerGlobalFunction.swift in Sources */,
+				F15E762F1DB4E72400937D79 /* AdapterRequest.swift in Sources */,
 				F10B851D1DA189C300E24851 /* NearbyViewController.swift in Sources */,
 				F174A6171D9D31D90077CD68 /* AppDelegate.swift in Sources */,
+				F15E76341DB4EA2100937D79 /* DriverFlickrAPI.swift in Sources */,
+				F15E76321DB4EA0400937D79 /* DriverFlickrKit.swift in Sources */,
+				F161C9F81DBA45AF007B938B /* BuilderGlobalSettings.swift in Sources */,
+				F161C9F61DBA444C007B938B /* BuilderSettingsProtocol.swift in Sources */,
 				F1BCBA551D9FB5FD000FF636 /* ZoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

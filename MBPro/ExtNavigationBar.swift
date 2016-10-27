@@ -11,7 +11,7 @@ import UIKit
 
 extension UINavigationBar: GetSkinProtocol {
     func getNewSkin () {
-     let currentVisitor =  ManagerGlobalVariable.sharedInstance.currentVisitot
-        currentVisitor.visitNavigationBar(self)
+        let currentSkinVisitor =  ManagerGlobalVariable.sharedInstance.currentSkinVisitor
+        currentSkinVisitor.visitNavigationBar(self)
     }
 }

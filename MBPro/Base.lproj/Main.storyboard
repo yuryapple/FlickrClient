@@ -23,7 +23,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCellForSearch" id="wTz-kk-9HA" customClass="PhotoCell" customModule="FlickrClient" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCellForSearchAluminium" id="wTz-kk-9HA" customClass="PhotoCell" customModule="FlickrClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="205" height="192"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -35,6 +35,14 @@
                                             <animations/>
                                             <gestureRecognizers/>
                                         </imageView>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OriginalSizeAluminium" translatesAutoresizingMaskIntoConstraints="NO" id="6B4-KT-Jaq">
+                                            <rect key="frame" x="155" y="142" width="50" height="50"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="CJq-i2-kgf"/>
+                                                <constraint firstAttribute="width" constant="50" id="eu1-lL-M9M"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -45,12 +53,56 @@
                                 <constraints>
                                     <constraint firstItem="ylS-s8-8Fs" firstAttribute="leading" secondItem="wTz-kk-9HA" secondAttribute="leadingMargin" id="MSR-nv-Yrl"/>
                                     <constraint firstItem="ylS-s8-8Fs" firstAttribute="top" secondItem="wTz-kk-9HA" secondAttribute="topMargin" id="Tg8-kY-k6n"/>
+                                    <constraint firstAttribute="trailing" secondItem="6B4-KT-Jaq" secondAttribute="trailing" id="bH7-LB-POV"/>
+                                    <constraint firstAttribute="bottom" secondItem="6B4-KT-Jaq" secondAttribute="bottom" id="h4r-Ir-Z7q"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="ylS-s8-8Fs" secondAttribute="bottom" id="kBl-m8-NjS"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="ylS-s8-8Fs" secondAttribute="trailing" id="xee-W2-ldI"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="imageSize" destination="6B4-KT-Jaq" id="b80-zf-BuK"/>
                                     <outlet property="imageView" destination="ylS-s8-8Fs" id="Jan-Fl-QTL"/>
                                     <segue destination="cvz-d5-JyY" kind="show" id="DA7-lt-FDq"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCellForSearchWood" id="29Z-QY-hHP" customClass="PhotoCell" customModule="FlickrClient" customModuleProvider="target">
+                                <rect key="frame" x="395" y="0.0" width="205" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="205" height="192"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gkc-vq-6Ud">
+                                            <rect key="frame" x="8" y="8" width="189" height="176"/>
+                                            <animations/>
+                                            <gestureRecognizers/>
+                                        </imageView>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OriginalSizeAluminium" translatesAutoresizingMaskIntoConstraints="NO" id="VSR-Lc-iIv">
+                                            <rect key="frame" x="155" y="142" width="50" height="50"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="ATT-UE-xWI"/>
+                                                <constraint firstAttribute="width" constant="50" id="QeJ-Bg-1y6"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <animations/>
+                                <color key="backgroundColor" red="0.63260718289999995" green="0.93517562310000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VSR-Lc-iIv" secondAttribute="bottom" id="B6i-Yw-6Oz"/>
+                                    <constraint firstItem="Gkc-vq-6Ud" firstAttribute="leading" secondItem="29Z-QY-hHP" secondAttribute="leadingMargin" id="Kqx-a0-5xd"/>
+                                    <constraint firstAttribute="trailing" secondItem="VSR-Lc-iIv" secondAttribute="trailing" id="UXU-tB-8xc"/>
+                                    <constraint firstItem="Gkc-vq-6Ud" firstAttribute="top" secondItem="29Z-QY-hHP" secondAttribute="topMargin" id="ZBb-tm-gKc"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Gkc-vq-6Ud" secondAttribute="trailing" id="apS-nL-PaE"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Gkc-vq-6Ud" secondAttribute="bottom" id="xJk-xU-xYa"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageSize" destination="VSR-Lc-iIv" id="0G7-hP-0il"/>
+                                    <outlet property="imageView" destination="Gkc-vq-6Ud" id="RJe-J1-en3"/>
+                                    <segue destination="cvz-d5-JyY" kind="show" id="CyW-in-KVw"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -264,14 +316,14 @@
                         <viewControllerLayoutGuide type="bottom" id="g0X-VP-urJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vw9-ri-AZI">
-                        <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="-2" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="D5a-Xg-hqu">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ia1-Cb-9Mh" customClass="ZoomView" customModule="FlickrClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
                                         <animations/>
                                         <gestureRecognizers/>
                                     </imageView>
@@ -300,21 +352,30 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bqf-X6-PRD">
+                        <barButtonItem key="rightBarButtonItem" title="📷" id="IsS-Ro-nRO">
+                            <connections>
+                                <action selector="getAvaliableSize:" destination="cvz-d5-JyY" id="6Aj-il-Rd2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageViewBottomConstraint" destination="7X9-0E-erv" id="R1e-s6-YXb"/>
                         <outlet property="imageViewLeadingConstraint" destination="4hG-yJ-Ufa" id="SXB-nK-P75"/>
                         <outlet property="imageViewTopConstraint" destination="u33-IM-qF0" id="L9V-L4-suZ"/>
                         <outlet property="imageViewTrailingConstraint" destination="O0C-V6-gWE" id="ePw-m0-Jsq"/>
+                        <outlet property="labelAvaliableSizeOfPhoto" destination="IsS-Ro-nRO" id="a8f-jB-KAA"/>
                         <outlet property="scrollView" destination="D5a-Xg-hqu" id="7dG-10-YzM"/>
                         <outlet property="zoomViewPhoto" destination="Ia1-Cb-9Mh" id="AgQ-8R-NX8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QxV-lE-oqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5208" y="649"/>
+            <point key="canvasLocation" x="5198" y="597"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tP3-vh-thm">
@@ -383,9 +444,10 @@
     </scenes>
     <resources>
         <image name="Binoculars-50" width="50" height="50"/>
+        <image name="OriginalSizeAluminium" width="48" height="48"/>
         <image name="Search-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="I3l-Jw-DsM"/>
+        <segue reference="DA7-lt-FDq"/>
     </inferredMetricsTieBreakers>
 </document>
