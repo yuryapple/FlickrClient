@@ -17,17 +17,39 @@ class BuilderGlobalSettings: NSObject  {
     //This prevents others from using the default '()' initializer for this class.
     private override init() {
         super.init()
-
+        
+       setAPIKeyAndSecret()
+       setItemsPerRow()
+       setPreCachedPages()
+       registerSettingsBundle()
+        
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: Selector("setGlobalDefaultValue"),
             name: NSUserDefaultsDidChangeNotification,
             object: nil)
-        
-        self.registerSettingsBundle()
     }
     
+    
     /**
-    Set global default value 
+    Set API key and secret values
+    */
+    private func setAPIKeyAndSecret () {
+        ManagerGlobalVariable.sharedInstance.apiKey = "348ea26ca45d5f9d3da7fff4822a7fd1"
+        ManagerGlobalVariable.sharedInstance.secret = "471cc96b04e60f27"
+    }
+    
+    private func setItemsPerRow () {
+       ManagerGlobalVariable.sharedInstance.itemsPerRow = 3
+    }
+    
+    private func setPreCachedPages () {
+        ManagerGlobalVariable.sharedInstance.preCachedPages = 1
+    }
+    
+     
+    
+    /**
+    Set global default value
     */
     func setGlobalDefaultValue() {
         
@@ -53,14 +75,16 @@ class BuilderGlobalSettings: NSObject  {
         //Set current skin
         switch (defaults.integerForKey("currentSkin")) {
         case (1):
-            ManagerGlobalVariable.sharedInstance.currentSkinVisitor = GeneratorVisitorKhaki().genetateVisitor()
+            ManagerGlobalVariable.sharedInstance.currentSkinVisitor = GeneratorVisitorWood().genetateVisitor()
         default:
-            ManagerGlobalVariable.sharedInstance.currentSkinVisitor = GeneratorVisitorSky().genetateVisitor()
+            ManagerGlobalVariable.sharedInstance.currentSkinVisitor = GeneratorVisitorAluminium().genetateVisitor()
         }
     }
     
     
    private func setGlobalValueForCurrentDriverOfFlickrServer () {
+    
+    print("setGlobalValueForCurrentDriverOfFlickrServer")
         //Get the defaults
         let defaults = NSUserDefaults.standardUserDefaults()
         
@@ -69,7 +93,7 @@ class BuilderGlobalSettings: NSObject  {
         case (1):
             ManagerGlobalVariable.sharedInstance.currentDriverForFlickrServer = DriverFlickrAPI()
         default:
-            ManagerGlobalVariable.sharedInstance.currentDriverForFlickrServer = DriverFlickrAPI()
+            ManagerGlobalVariable.sharedInstance.currentDriverForFlickrServer = DriverFlickrKit()
         }
     }
     

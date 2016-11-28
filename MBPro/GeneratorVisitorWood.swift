@@ -8,10 +8,10 @@
 
 import UIKit
 
-class GeneratorVisitorSky: GeneratorVisitorProtocol {
+class GeneratorVisitorWood: GeneratorVisitorProtocol {
 
      func genetateVisitor () -> VisitorProtocol  {
-        return VisitorSkinSky()
+        return VisitorSkinWood()
     }
     
 

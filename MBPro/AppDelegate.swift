@@ -10,8 +10,6 @@ import UIKit
 import FlickrKit
 
 
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -21,13 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window?.tintColor = UIColor.blackColor()
         
-        let apiKey = "348ea26ca45d5f9d3da7fff4822a7fd1";
-        let secret = "471cc96b04e60f27";
-        FlickrKit.sharedFlickrKit().initializeWithAPIKey(apiKey, sharedSecret: secret)
-        
         // Set global variable
-        ManagerGlobalVariable.sharedInstance.itemsPerRow = 3
-        
         BuilderGlobalSettings.sharedInstance.setGlobalDefaultValue()
         
         return true

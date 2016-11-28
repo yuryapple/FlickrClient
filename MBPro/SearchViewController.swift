@@ -43,6 +43,9 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     
     /// How many pages was loaded from Flickr
     private var pageNumber = 1
+
+    /// How many pages was loaded from Flickr
+    private var currentNumberPage = 1
     
     /// Section insets
     let sectionInsets = UIEdgeInsets(top:2.0, left: 2.0, bottom: 2.0, right: 2.0)
@@ -101,21 +104,14 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     
     func getNewSkin () {
         
-        print("get new ")
-        
         let currentNavigationBar = self.navigationController?.navigationBar
         let currentTabBar =  self.tabBarController?.tabBar
-       
-        
         
         currentNavigationBar?.getNewSkin()
         currentTabBar?.getNewSkin()
         PhotoCell.getNewSkin()
             
         self.collectionView?.reloadData()
-
-        
-        
     }
     
     
@@ -240,24 +236,35 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
             self.labelForLoadedPages.text =  ""
         } else {
             let height = self.collectionView?.frame.size.height
-            let currentPage = ((self.collectionView?.contentOffset.y)! + (0.5 * height!)) / height!
+            let numberCurrentPageForShow = ((self.collectionView?.contentOffset.y)! + (0.5 * height!)) / height!
             let totalPages = (self.collectionView?.contentSize.height)! / height!
            
             
             // Initial value contentSize is CGSizeZiro
             if  String(Int(round(totalPages))) == "0"  {
-                 labelForLoadedPages.text = String(Int(round(currentPage))) + "/1"
+                 labelForLoadedPages.text = String(Int(round(numberCurrentPageForShow))) + "/1"
             } else {
-                labelForLoadedPages.text = String(Int(round(currentPage))) + "/" + String(Int(round(totalPages)))
+                labelForLoadedPages.text = String(Int(round(numberCurrentPageForShow))) + "/" + String(Int(round(totalPages)))
             }
+            
+            markPagesAsUselessInCache(Int(round(numberCurrentPageForShow)))
         }
     }
+    
+    
+    private func markPagesAsUselessInCache (numberCurrentPageForShow : Int) {
+        if currentNumberPage != numberCurrentPageForShow {
+            currentNumberPage = numberCurrentPageForShow
+            CacheOfApplication.sharedInstance.markPagesAsUselessAboveAndBelowFromCurrentPage(currentNumberPage)
+        }
+    }
+    
     
     /**
     Create and show activity indicator when photos are loading. This used the pod MBProgressHUD.
     */
     private func showActivityIndicator() {
-        activityIndicator = ManagerGlobalFunction.sharedInstance.showActivityIndicator(view: self.view, isLoading: &isLoadingDateFromServer)
+//        activityIndicator = ManagerGlobalFunction.sharedInstance.showActivityIndicator(view: self.view, isLoading: &isLoadingDateFromServer)
     }
     
     /**
@@ -274,19 +281,19 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     Load URLs of photos to array. This function used FlickrKit
     */
     func loadUrlPhotos() {
-        showActivityIndicator()
+       // showActivityIndicator()
 
         // Prepare for saerch
         let search = AdapterRequest.sharedInstance.getFlickrPhotosSearch(tag: multipleSegment[0], text: multipleSegment[1], long: nil, lat: nil, radius: nil, page: String(pageNumber))
         
         AdapterRequest.sharedInstance.getNewPortionURLsFromFlickrServer(search) {(response, error) -> Void in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if let er = error {
+     //     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            if let er = error {
                     self.showError (er)
                 } else {
                     self.fillPhotoInfoArray(response)
                 }
-            })
+          //  })
         }
      }
     
@@ -298,12 +305,29 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
         self.showAlertWithError(error.localizedDescription)
     }
     
+    
+    
+    func prepareBeforeLoadingFirstPage () {
+      self.pageNumber = 1
+      self.collectionView!.performBatchUpdates({
+            //  Remove old URL
+            self.PhotoInfoArray.removeAll()
+            self.collectionView?.reloadSections(NSIndexSet(index: 0))
+            print("reload")
+            CacheOfApplication.sharedInstance.removeAllObjects()
+            print("complition")
+        }, completion: nil)
 
+    }
+    
+    
+    
     func fillPhotoInfoArray (response: AnyObject) {
             if self.pageNumber == 1 {
-                //  Remove old URL
-                self.PhotoInfoArray.removeAll()
+           //     prepareBeforeLoadingFirstPage ()
             }
+        
+    
             // Pull out the photo urls from the results
             let topPhotos = response["photos"] as! [NSObject: AnyObject]
             let photoArray = topPhotos["photo"] as! [[NSObject: AnyObject]]
@@ -317,22 +341,56 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
                 photoInf.farm = photoDictionary["farm"] as! Int
                 photoInf.server = String(photoDictionary["server"]!)
                 photoInf.secret = String(photoDictionary["secret"]!)
-                (photoInf.avaliableOriginalSize = (photoDictionary["url_o"]) != nil)
-                
-                
-                
-                
-                self.PhotoInfoArray.append(photoInf)
-                
+                photoInf.avaliableOriginalSize = (photoDictionary["url_o"]) != nil
+     
+                PhotoInfoArray.append(photoInf)
+                uppdatesItem (self.PhotoInfoArray.count-1)
             }
-            // Reload for show new photos
-            self.collectionView?.reloadData()
-            self.hideActivityIndicator()
-            self.showNumberOfLoadedPages()
+                // Reload for show new photos
+             //   self.collectionView?.reloadData()
+             //   self.hideActivityIndicator()
+                self.showNumberOfLoadedPages()
     }
     
     
+    func uppdatesItem (itemIndex : Int) {
+        
+     //   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+        
+            
+            print("1   Item -   \( itemIndex)")
+            print("2   Items in sect -   \( self.collectionView?.numberOfItemsInSection(0))")
+        
+        
+        self.collectionView!.performBatchUpdates({
+            let indexPathArray : [NSIndexPath] = [NSIndexPath(forItem: itemIndex, inSection: 0)]
+            self.collectionView?.insertItemsAtIndexPaths(indexPathArray)
+                }, completion: nil)
+        
+            
+            
+         //   dispatch_async(dispatch_get_main_queue(), { () -> Void in
+             //   self.collectionView!.performBatchUpdates({
+                    
+                 //   self.collectionView?.reloadItemsAtIndexPaths(indexPathArray)
+            
+            
+                    
+ 
+              //      }, completion: { (finished) -> Void in
+               //         if finished {
+                //            print("Update")
+                //        } else {
+                 //           print("Not update")
+                  //      }
+              //  })
+         //   })
+            
+    //    })
+
     
+    
+    }
     
     
 // MARK: - UITextFieldDelegate
@@ -362,8 +420,10 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
         
          prepareSegmentControlForSearch()
         
-        // New request so we need set page 1
-        self.pageNumber = 1
+        // New request so we need set page 1 and clear arrays
+        prepareBeforeLoadingFirstPage()
+        
+        
         // This closer will be used if this request is bad.
         self.activateSearchFild = {textField.becomeFirstResponder()}
         
@@ -379,6 +439,9 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
     }
     
   override  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+        print("3   number Of Items In Section \(PhotoInfoArray.count)")
+    
         return self.PhotoInfoArray.count
     }
 
@@ -387,9 +450,15 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
        let urlRequest = NSURLRequest(URL: self.PhotoInfoArray[indexPath.row].photoURL)
        let avaliableOriginalSize  =  self.PhotoInfoArray[indexPath.row].avaliableOriginalSize
     
-       AdapterRequest.sharedInstance.getSmallPhotoForCell(urlRequest , cell: cell , avaliableOriginSize: avaliableOriginalSize)
+       print("4   Load")
     
+       AdapterRequest.sharedInstance.prepareAndShowCell(urlRequest, cell: cell, indexPhoto: indexPath.row, avaliableOriginSize: avaliableOriginalSize)
 
+    
+    
+    
+    print("9   return cell")
+    print(" ")
        return cell
     }
     
@@ -420,6 +489,7 @@ class SearchViewController: UICollectionViewController , UITextFieldDelegate , U
                ZViewController.urlStringForSmallPhoto = urlString
 
                ZViewController.photoId = String(photoI)
+               ZViewController.indexSelectCell = indexPath.row
             }
     }
     

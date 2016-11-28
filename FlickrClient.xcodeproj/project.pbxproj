@@ -10,18 +10,23 @@
 		5B2892A6BFD6D52B9CB19DF5 /* Pods_MBPro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A800D0D306B70267805F17 /* Pods_MBPro.framework */; };
 		F10507921D9E62AF00DB7BDF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10507911D9E62AF00DB7BDF /* PhotoCell.swift */; settings = {ASSET_TAGS = (); }; };
 		F109687D1DA429A1006CE16B /* ManagerGlobalValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */; settings = {ASSET_TAGS = (); }; };
-		F10ADCD01DB237F600C6B48D /* VisitorKhaki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCD01DB237F600C6B48D /* VisitorWood.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCCF1DB237F600C6B48D /* VisitorWood.swift */; settings = {ASSET_TAGS = (); }; };
 		F10ADCD41DB2415800C6B48D /* ExtNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD31DB2415800C6B48D /* ExtNavigationBar.swift */; settings = {ASSET_TAGS = (); }; };
 		F10ADCD61DB243BF00C6B48D /* GetSkinProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD51DB243BF00C6B48D /* GetSkinProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		F10ADCD81DB2447000C6B48D /* ExtTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */; settings = {ASSET_TAGS = (); }; };
 		F10ADCDA1DB2455D00C6B48D /* VisitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCD91DB2455D00C6B48D /* VisitorProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		F10ADCDC1DB2472900C6B48D /* VisitorSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCDB1DB2472900C6B48D /* VisitorSky.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCDC1DB2472900C6B48D /* VisitorAluminium.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCDB1DB2472900C6B48D /* VisitorAluminium.swift */; settings = {ASSET_TAGS = (); }; };
 		F10ADCDF1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCDE1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorSky.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorSky.swift */; settings = {ASSET_TAGS = (); }; };
-		F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorWood.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorWood.swift */; settings = {ASSET_TAGS = (); }; };
+		F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorAluminium.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorAluminium.swift */; settings = {ASSET_TAGS = (); }; };
 		F10B851D1DA189C300E24851 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B851C1DA189C300E24851 /* NearbyViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		F11D930C1DA8C01600F10FD8 /* ManagerGlobalFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */; settings = {ASSET_TAGS = (); }; };
 		F11D930E1DA9212D00F10FD8 /* ZoomViewPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */; settings = {ASSET_TAGS = (); }; };
+		F12400A71DE482A1000FB049 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12400A61DE482A0000FB049 /* FilterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F12400C91DEA1CBC000FB049 /* ContainerFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12400C81DEA1CBB000FB049 /* ContainerFilterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F152EF991DDB385F0070D1FC /* SepiaTone.swift in Sources */ = {isa = PBXBuildFile; fileRef = F152EF981DDB385F0070D1FC /* SepiaTone.swift */; settings = {ASSET_TAGS = (); }; };
+		F15A11FA1DC88214001FBAA5 /* CacheOfApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A11F91DC88214001FBAA5 /* CacheOfApplication.swift */; settings = {ASSET_TAGS = (); }; };
+		F15A29B21DEAD0B000970396 /* FilterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15A29B11DEAD0B000970396 /* FilterProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		F15E762F1DB4E72400937D79 /* AdapterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E762E1DB4E72400937D79 /* AdapterRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		F15E76321DB4EA0400937D79 /* DriverFlickrKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E76311DB4EA0400937D79 /* DriverFlickrKit.swift */; settings = {ASSET_TAGS = (); }; };
 		F15E76341DB4EA2100937D79 /* DriverFlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15E76331DB4EA2100937D79 /* DriverFlickrAPI.swift */; settings = {ASSET_TAGS = (); }; };
@@ -29,11 +34,16 @@
 		F161C9F31DBA10A9007B938B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F161C9F21DBA10A9007B938B /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 		F161C9F61DBA444C007B938B /* BuilderSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C9F51DBA444C007B938B /* BuilderSettingsProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		F161C9F81DBA45AF007B938B /* BuilderGlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161C9F71DBA45AF007B938B /* BuilderGlobalSettings.swift */; settings = {ASSET_TAGS = (); }; };
+		F16676031DDD040E00CDA74E /* CrystallizeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16676021DDD040E00CDA74E /* CrystallizeFilter.swift */; settings = {ASSET_TAGS = (); }; };
+		F16676051DDD9F2600CDA74E /* CircleSplashDistortion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16676041DDD9F2500CDA74E /* CircleSplashDistortion.swift */; settings = {ASSET_TAGS = (); }; };
+		F16676071DE32C8900CDA74E /* EdgesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16676061DE32C8900CDA74E /* EdgesFilter.swift */; settings = {ASSET_TAGS = (); }; };
 		F174A6171D9D31D90077CD68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174A6161D9D31D90077CD68 /* AppDelegate.swift */; };
 		F174A6191D9D31D90077CD68 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F174A6181D9D31D90077CD68 /* SearchViewController.swift */; };
 		F174A61C1D9D31D90077CD68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174A61A1D9D31D90077CD68 /* Main.storyboard */; };
 		F174A61E1D9D31D90077CD68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F174A61D1D9D31D90077CD68 /* Assets.xcassets */; };
 		F174A6211D9D31D90077CD68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F174A61F1D9D31D90077CD68 /* LaunchScreen.storyboard */; };
+		F1B3033A1DC9DA5D006616D2 /* FCImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B303391DC9DA5D006616D2 /* FCImageView.swift */; settings = {ASSET_TAGS = (); }; };
+		F1B3033D1DCCA930006616D2 /* ExtPurgeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B3033C1DCCA930006616D2 /* ExtPurgeData.swift */; settings = {ASSET_TAGS = (); }; };
 		F1BCBA551D9FB5FD000FF636 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BCBA541D9FB5FD000FF636 /* ZoomViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -43,18 +53,23 @@
 		896CF8AD503C222B815B6904 /* Pods-MBPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MBPro/Pods-MBPro.debug.xcconfig"; sourceTree = "<group>"; };
 		F10507911D9E62AF00DB7BDF /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerGlobalValue.swift; sourceTree = "<group>"; };
-		F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorKhaki.swift; sourceTree = "<group>"; };
+		F10ADCCF1DB237F600C6B48D /* VisitorWood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorWood.swift; sourceTree = "<group>"; };
 		F10ADCD31DB2415800C6B48D /* ExtNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtNavigationBar.swift; sourceTree = "<group>"; };
 		F10ADCD51DB243BF00C6B48D /* GetSkinProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSkinProtocol.swift; sourceTree = "<group>"; };
 		F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtTabBar.swift; sourceTree = "<group>"; };
 		F10ADCD91DB2455D00C6B48D /* VisitorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorProtocol.swift; sourceTree = "<group>"; };
-		F10ADCDB1DB2472900C6B48D /* VisitorSky.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorSky.swift; sourceTree = "<group>"; };
+		F10ADCDB1DB2472900C6B48D /* VisitorAluminium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorAluminium.swift; sourceTree = "<group>"; };
 		F10ADCDE1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorProtocol.swift; sourceTree = "<group>"; };
-		F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorSky.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorSky.swift; sourceTree = "<group>"; };
-		F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorKhaki.swift; sourceTree = "<group>"; };
+		F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorWood.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorWood.swift; sourceTree = "<group>"; };
+		F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorAluminium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorVisitorAluminium.swift; sourceTree = "<group>"; };
 		F10B851C1DA189C300E24851 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
 		F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerGlobalFunction.swift; sourceTree = "<group>"; };
 		F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewPhoto.swift; sourceTree = "<group>"; };
+		F12400A61DE482A0000FB049 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		F12400C81DEA1CBB000FB049 /* ContainerFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerFilterViewController.swift; sourceTree = "<group>"; };
+		F152EF981DDB385F0070D1FC /* SepiaTone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SepiaTone.swift; sourceTree = "<group>"; };
+		F15A11F91DC88214001FBAA5 /* CacheOfApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheOfApplication.swift; sourceTree = "<group>"; };
+		F15A29B11DEAD0B000970396 /* FilterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterProtocol.swift; sourceTree = "<group>"; };
 		F15E762E1DB4E72400937D79 /* AdapterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdapterRequest.swift; sourceTree = "<group>"; };
 		F15E76311DB4EA0400937D79 /* DriverFlickrKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverFlickrKit.swift; sourceTree = "<group>"; };
 		F15E76331DB4EA2100937D79 /* DriverFlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverFlickrAPI.swift; sourceTree = "<group>"; };
@@ -62,6 +77,9 @@
 		F161C9F21DBA10A9007B938B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		F161C9F51DBA444C007B938B /* BuilderSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderSettingsProtocol.swift; sourceTree = "<group>"; };
 		F161C9F71DBA45AF007B938B /* BuilderGlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderGlobalSettings.swift; sourceTree = "<group>"; };
+		F16676021DDD040E00CDA74E /* CrystallizeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrystallizeFilter.swift; sourceTree = "<group>"; };
+		F16676041DDD9F2500CDA74E /* CircleSplashDistortion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleSplashDistortion.swift; sourceTree = "<group>"; };
+		F16676061DE32C8900CDA74E /* EdgesFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgesFilter.swift; sourceTree = "<group>"; };
 		F174A6131D9D31D90077CD68 /* FlickrClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F174A6161D9D31D90077CD68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F174A6181D9D31D90077CD68 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +87,8 @@
 		F174A61D1D9D31D90077CD68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F174A6201D9D31D90077CD68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F174A6221D9D31D90077CD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1B303391DC9DA5D006616D2 /* FCImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCImageView.swift; sourceTree = "<group>"; };
+		F1B3033C1DCCA930006616D2 /* ExtPurgeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtPurgeData.swift; sourceTree = "<group>"; };
 		F1BCBA541D9FB5FD000FF636 /* ZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,34 +113,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F10ADCD11DB23FE200C6B48D /* Visitors */ = {
+		F10ADCD11DB23FE200C6B48D /* VisitorsForView */ = {
 			isa = PBXGroup;
 			children = (
 				F10ADCD91DB2455D00C6B48D /* VisitorProtocol.swift */,
-				F10ADCDB1DB2472900C6B48D /* VisitorSky.swift */,
-				F10ADCCF1DB237F600C6B48D /* VisitorKhaki.swift */,
+				F10ADCDB1DB2472900C6B48D /* VisitorAluminium.swift */,
+				F10ADCCF1DB237F600C6B48D /* VisitorWood.swift */,
 			);
-			name = Visitors;
+			name = VisitorsForView;
 			sourceTree = "<group>";
 		};
-		F10ADCD21DB2401B00C6B48D /* Extension */ = {
+		F10ADCD21DB2401B00C6B48D /* ExtensionForView */ = {
 			isa = PBXGroup;
 			children = (
 				F10ADCD51DB243BF00C6B48D /* GetSkinProtocol.swift */,
 				F10ADCD31DB2415800C6B48D /* ExtNavigationBar.swift */,
 				F10ADCD71DB2447000C6B48D /* ExtTabBar.swift */,
 			);
-			name = Extension;
+			name = ExtensionForView;
 			sourceTree = "<group>";
 		};
-		F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitor */ = {
+		F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitorForViews */ = {
 			isa = PBXGroup;
 			children = (
 				F10ADCDE1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift */,
-				F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorSky.swift */,
-				F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift */,
+				F10ADCE01DB2AACB00C6B48D /* GeneratorVisitorWood.swift */,
+				F10ADCE21DB2AD2100C6B48D /* GeneratorVisitorAluminium.swift */,
 			);
-			name = GeneratorVisitor;
+			name = GeneratorVisitorForViews;
 			sourceTree = "<group>";
 		};
 		F10ADCE41DB3704700C6B48D /* SearchTab */ = {
@@ -149,6 +169,73 @@
 			name = AdapterRequest;
 			sourceTree = "<group>";
 		};
+		F12400A51DE481F5000FB049 /* FiltersControl */ = {
+			isa = PBXGroup;
+			children = (
+				F12400A61DE482A0000FB049 /* FilterViewController.swift */,
+				F12400C81DEA1CBB000FB049 /* ContainerFilterViewController.swift */,
+			);
+			name = FiltersControl;
+			sourceTree = "<group>";
+		};
+		F127777F1DC21F5A006B8FB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F10507911D9E62AF00DB7BDF /* PhotoCell.swift */,
+				F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */,
+				F1B303391DC9DA5D006616D2 /* FCImageView.swift */,
+				F152EF971DDB37F30070D1FC /* Filters */,
+				F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitorForViews */,
+				F10ADCD11DB23FE200C6B48D /* VisitorsForView */,
+				F10ADCD21DB2401B00C6B48D /* ExtensionForView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F12777801DC22019006B8FB7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F12400A51DE481F5000FB049 /* FiltersControl */,
+				F10ADCE41DB3704700C6B48D /* SearchTab */,
+				F10ADCE51DB3706F00C6B48D /* NearbyTab */,
+				F15E76371DB63A8A00937D79 /* ZoomPhoto */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F12777811DC2260A006B8FB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F15A11F81DC881CA001FBAA5 /* CacheOfApplication */,
+				F161C9F41DBA43A1007B938B /* BuilderGlobalSettings */,
+				F10ADCE61DB3757000C6B48D /* AdapterRequest */,
+				F1B3033B1DCCA88A006616D2 /* ExtensionForModels */,
+				F161C9F21DBA10A9007B938B /* Settings.bundle */,
+				F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F152EF971DDB37F30070D1FC /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				F15A29B11DEAD0B000970396 /* FilterProtocol.swift */,
+				F152EF981DDB385F0070D1FC /* SepiaTone.swift */,
+				F16676041DDD9F2500CDA74E /* CircleSplashDistortion.swift */,
+				F16676061DE32C8900CDA74E /* EdgesFilter.swift */,
+				F16676021DDD040E00CDA74E /* CrystallizeFilter.swift */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		F15A11F81DC881CA001FBAA5 /* CacheOfApplication */ = {
+			isa = PBXGroup;
+			children = (
+				F15A11F91DC88214001FBAA5 /* CacheOfApplication.swift */,
+			);
+			name = CacheOfApplication;
+			sourceTree = "<group>";
+		};
 		F15E76301DB4E98600937D79 /* DriversForFlickr */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				F1BCBA541D9FB5FD000FF636 /* ZoomViewController.swift */,
-				F11D930D1DA9212D00F10FD8 /* ZoomViewPhoto.swift */,
 			);
 			name = ZoomPhoto;
 			sourceTree = "<group>";
@@ -198,25 +284,25 @@
 			isa = PBXGroup;
 			children = (
 				F174A6161D9D31D90077CD68 /* AppDelegate.swift */,
-				F10ADCE41DB3704700C6B48D /* SearchTab */,
-				F10ADCE51DB3706F00C6B48D /* NearbyTab */,
-				F15E76371DB63A8A00937D79 /* ZoomPhoto */,
-				F161C9F41DBA43A1007B938B /* BuilderGlobalSettings */,
-				F109687C1DA429A1006CE16B /* ManagerGlobalValue.swift */,
+				F12777811DC2260A006B8FB7 /* Models */,
+				F12777801DC22019006B8FB7 /* Controllers */,
+				F127777F1DC21F5A006B8FB7 /* Views */,
 				F11D930B1DA8C01600F10FD8 /* ManagerGlobalFunction.swift */,
-				F10507911D9E62AF00DB7BDF /* PhotoCell.swift */,
-				F161C9F21DBA10A9007B938B /* Settings.bundle */,
 				F174A61A1D9D31D90077CD68 /* Main.storyboard */,
 				F174A61D1D9D31D90077CD68 /* Assets.xcassets */,
 				F174A61F1D9D31D90077CD68 /* LaunchScreen.storyboard */,
 				F174A6221D9D31D90077CD68 /* Info.plist */,
-				F10ADCE61DB3757000C6B48D /* AdapterRequest */,
-				F10ADCDD1DB2A7CE00C6B48D /* GeneratorVisitor */,
-				F10ADCD11DB23FE200C6B48D /* Visitors */,
-				F10ADCD21DB2401B00C6B48D /* Extension */,
 			);
 			name = FCliet;
 			path = MBPro;
+			sourceTree = "<group>";
+		};
+		F1B3033B1DCCA88A006616D2 /* ExtensionForModels */ = {
+			isa = PBXGroup;
+			children = (
+				F1B3033C1DCCA930006616D2 /* ExtPurgeData.swift */,
+			);
+			name = ExtensionForModels;
 			sourceTree = "<group>";
 		};
 		F1CE6D53B7D5CCE077305DB5 /* Frameworks */ = {
@@ -350,27 +436,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F10ADCDC1DB2472900C6B48D /* VisitorSky.swift in Sources */,
+				F15A11FA1DC88214001FBAA5 /* CacheOfApplication.swift in Sources */,
+				F10ADCDC1DB2472900C6B48D /* VisitorAluminium.swift in Sources */,
 				F11D930E1DA9212D00F10FD8 /* ZoomViewPhoto.swift in Sources */,
-				F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorSky.swift in Sources */,
+				F15A29B21DEAD0B000970396 /* FilterProtocol.swift in Sources */,
+				F10ADCE11DB2AACB00C6B48D /* GeneratorVisitorWood.swift in Sources */,
 				F15E76361DB4EA8800937D79 /* DriverFlickrProtocol.swift in Sources */,
+				F152EF991DDB385F0070D1FC /* SepiaTone.swift in Sources */,
+				F1B3033D1DCCA930006616D2 /* ExtPurgeData.swift in Sources */,
 				F10ADCDF1DB2A85500C6B48D /* GeneratorVisitorProtocol.swift in Sources */,
 				F10ADCD41DB2415800C6B48D /* ExtNavigationBar.swift in Sources */,
 				F109687D1DA429A1006CE16B /* ManagerGlobalValue.swift in Sources */,
 				F10ADCDA1DB2455D00C6B48D /* VisitorProtocol.swift in Sources */,
 				F10ADCD81DB2447000C6B48D /* ExtTabBar.swift in Sources */,
+				F16676071DE32C8900CDA74E /* EdgesFilter.swift in Sources */,
 				F174A6191D9D31D90077CD68 /* SearchViewController.swift in Sources */,
 				F10ADCD61DB243BF00C6B48D /* GetSkinProtocol.swift in Sources */,
 				F10507921D9E62AF00DB7BDF /* PhotoCell.swift in Sources */,
-				F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorKhaki.swift in Sources */,
-				F10ADCD01DB237F600C6B48D /* VisitorKhaki.swift in Sources */,
+				F10ADCE31DB2AD2100C6B48D /* GeneratorVisitorAluminium.swift in Sources */,
+				F10ADCD01DB237F600C6B48D /* VisitorWood.swift in Sources */,
 				F11D930C1DA8C01600F10FD8 /* ManagerGlobalFunction.swift in Sources */,
 				F15E762F1DB4E72400937D79 /* AdapterRequest.swift in Sources */,
 				F10B851D1DA189C300E24851 /* NearbyViewController.swift in Sources */,
+				F1B3033A1DC9DA5D006616D2 /* FCImageView.swift in Sources */,
+				F12400C91DEA1CBC000FB049 /* ContainerFilterViewController.swift in Sources */,
+				F16676031DDD040E00CDA74E /* CrystallizeFilter.swift in Sources */,
+				F12400A71DE482A1000FB049 /* FilterViewController.swift in Sources */,
 				F174A6171D9D31D90077CD68 /* AppDelegate.swift in Sources */,
 				F15E76341DB4EA2100937D79 /* DriverFlickrAPI.swift in Sources */,
 				F15E76321DB4EA0400937D79 /* DriverFlickrKit.swift in Sources */,
 				F161C9F81DBA45AF007B938B /* BuilderGlobalSettings.swift in Sources */,
+				F16676051DDD9F2600CDA74E /* CircleSplashDistortion.swift in Sources */,
 				F161C9F61DBA444C007B938B /* BuilderSettingsProtocol.swift in Sources */,
 				F1BCBA551D9FB5FD000FF636 /* ZoomViewController.swift in Sources */,
 			);

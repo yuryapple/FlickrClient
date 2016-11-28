@@ -11,7 +11,7 @@ import UIKit
 
 class ZoomView: UIImageView {
 
-    /// Closer for normal size
+    /// Closer for comeback to normal size of photo
     var actionForDoubleTap : (() -> Void)?
     
     
@@ -22,4 +22,8 @@ class ZoomView: UIImageView {
             actionForDoubleTap!()
         }
     }
+    
+    
+    
+    
 }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-class GeneratorVisitorKhaki: GeneratorVisitorProtocol {
+class GeneratorVisitorAluminium: GeneratorVisitorProtocol {
     
     func genetateVisitor () -> VisitorProtocol  {
-        return VisitorSkinKhaki()
+        return VisitorSkinAluminium()
     }
 }

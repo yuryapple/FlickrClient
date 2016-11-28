@@ -9,6 +9,9 @@
 import UIKit
 import FlickrKit
 
+
+
+
 struct FlickrSizeAvaliable {
     var label : String!
     var height : String? = "height"
@@ -32,10 +35,43 @@ class ZoomViewController: UIViewController, UIScrollViewDelegate {
             showAvaliableSize()
         }
   
+    @IBAction func applyFilter(sender: AnyObject) {
+      //zoomViewPhoto.image   = SepiaToneFilter.sharedInstance.applyFilter(zoomViewPhoto.image!)
+      
+      //  let i = OpTileFilter.sharedInstance.applyFilter(zoomViewPhoto.image!)
+    //    zoomViewPhoto.image = i
+     //   zoomViewPhoto.image = CircleSplashDistortionFilter.sharedInstance.applyFilter(zoomViewPhoto.image!)
+        
+       print("\(zoomViewPhoto.image)")
+      
+        
+     //   let i = CIEdgesFilter.sharedInstance.applyFilter(zoomViewPhoto.image!)
+       
+//           zoomViewPhoto.contentMode = .ScaleAspectFill
+    //    zoomViewPhoto.image = i
+        
+        
+
+  
+
+        
+        zoomViewPhoto.contentMode = .ScaleAspectFit
+         view.layoutIfNeeded()
+    }
+    
+    
+    
+
+    
+    
+    
 
     var urlStringForSmallPhoto : String!
     var photoId = ""
     var photoSizesArray : [FlickrSizeAvaliable]! = []
+    var currentFilterOfPhoto : Filter?
+    var indexSelectCell : Int?
+    
     
     
     override func viewDidLoad() {
@@ -179,7 +215,31 @@ class ZoomViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
+    @IBAction func unwindToRed(unwindSegue: UIStoryboardSegue) {
+        let context = CIContext()
+        
+        if  let filterController = unwindSegue.sourceViewController as? FilterViewController {
+            
+            currentFilterOfPhoto = filterController.closerOfPhotoFilter
+            
+            let output =   currentFilterOfPhoto!(zoomViewPhoto.image!)
+      
+            let filteredImage = context.createCGImage(output, fromRect: output.extent)
+ 
+            zoomViewPhoto.image  = UIImage(CGImage: filteredImage)
+            
+        }
+    }
     
+    // MARK: - Prepare for seque
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Filters" {
+            let filterController = segue.destinationViewController as! FilterViewController
+            filterController.rectOfPhoto = zoomViewPhoto.image?.size
+            filterController.indexPhotoInCache = indexSelectCell
+        }
+    }
     
     
 }

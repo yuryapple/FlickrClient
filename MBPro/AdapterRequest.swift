@@ -20,26 +20,37 @@ class AdapterRequest: DriverFlickrProtocol {
     var currentDriverForFlickr = ManagerGlobalVariable.sharedInstance.currentDriverForFlickrServer
 
     
-    func getSmallPhotoForCell(urlRequest: NSURLRequest,  cell: PhotoCell, avaliableOriginSize : Bool) {
+    func prepareAndShowCell(urlRequest: NSURLRequest,  cell: PhotoCell, indexPhoto : Int, avaliableOriginSize : Bool) {
+       
+      //  cell.showAvaliableOriginLabel(avaliableOriginSize)
         
-        // Get photo from Flickr server
-        NSURLSession.sharedSession().dataTaskWithRequest(urlRequest) { (data,response, error) -> Void in
-            let image = UIImage(data: data!)
-            // Show photo on UI element. So we need mainQueue
-            NSOperationQueue.mainQueue().addOperationWithBlock({
+       // self.performSelectorOnMainThread(Selector(showAvaliableOriginLabel(cell)), withObject: self, waitUntilDone: true)
+                print("5   prepareAndShowCell")
                 cell.viewWithTag(100)?.hidden = !avaliableOriginSize
-                cell.imageView.image = image
-            })
-            }.resume()
+      
+        
+        
+        
+            let photoView = cell.imageView as! FCImageView
+        
+            photoView.image =  UIImage(named: "PlaceHolder.png")
+            photoView.photoOfURLRequest = urlRequest
+            photoView.indexPhoto = indexPhoto
+            photoView.loadPhotoInBackground()
     }
+    
+    
+
+    
+    
     
     
     func getBigPhotoForZoom(urlStringForSelectedPhoto : String, imageZoom: ZoomView) {
         let urlRequest = getUrlRequestForSelectedPhoto(urlStringForSelectedPhoto)
-        
         // Get photo from Flickr server
         NSURLSession.sharedSession().dataTaskWithRequest(urlRequest) { (data,response, error) -> Void in
             let image = UIImage(data: data!)
+            
             // Show photo on UI element. So we need mainQueue
             NSOperationQueue.mainQueue().addOperationWithBlock({
                 imageZoom.image = image
@@ -79,4 +90,5 @@ class AdapterRequest: DriverFlickrProtocol {
         currentDriverForFlickr.getAvaliableSizesPhotoFromFlickrServer(photoId, complition: complition)
     }
 
+    
 }

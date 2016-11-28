@@ -17,6 +17,13 @@ class ManagerGlobalVariable {
     private init() {}
 
     ///Global variable
+    
+    var apiKey : String!
+    var secret : String!
+    
+    /// How many rows on CollectionView
+    var preCachedPages: Int = 1
+    
     /// How many rows on CollectionView
     var itemsPerRow: CGFloat = 3
     /// How many photos wil be download per request. read-only competed property

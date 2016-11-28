@@ -21,12 +21,28 @@ class PhotoCell: UICollectionViewCell {
      required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
         
-      let i = self.viewWithTag(100) as! UIImageView
-      i.image =  PhotoCell.imageOfSize
+      let imageV = self.viewWithTag(100) as! UIImageView
+      imageV.image =  PhotoCell.imageOfSize
     }
+    
+  
+    
+    
+/*
+    func showAvaliableOriginLabel(avaliableOriginSize : Bool) {
+       self.performSelectorOnMainThread(Selector(show(avaliableOriginSize)), withObject: self, waitUntilDone: false)
 
+    }
+    
+    func show(avaliableOriginSize : Bool) {
+        print("5   prepareAndShowCell")
+        self.viewWithTag(100)?.hidden = !avaliableOriginSize
+    }
+ */
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageSize: UIImageView!
+
+
     
 }

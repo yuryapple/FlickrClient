@@ -11,6 +11,10 @@ import FlickrKit
 
 class DriverFlickrKit: DriverFlickrProtocol {
     
+    init() {
+        FlickrKit.sharedFlickrKit().initializeWithAPIKey(ManagerGlobalVariable.sharedInstance.apiKey, sharedSecret: ManagerGlobalVariable.sharedInstance.secret)
+    }
+    
 // MARK: -  DriverFlickrProtocol
     
     // Prepare FKFlickrPhotosSearch object from Flickr Kit
@@ -61,5 +65,9 @@ class DriverFlickrKit: DriverFlickrProtocol {
 
     }
     
+    
+    deinit {
+        print("Upload  DriverFlickrKit ")
+    }
     
 }

@@ -9,7 +9,8 @@
 import UIKit
 
 class DriverFlickrAPI: DriverFlickrProtocol {
-    let apiKey = "348ea26ca45d5f9d3da7fff4822a7fd1";
+    
+    let apiKey = ManagerGlobalVariable.sharedInstance.apiKey
 
     
     private func escapedParam (currentParam : String) ->String {
@@ -131,6 +132,6 @@ class DriverFlickrAPI: DriverFlickrProtocol {
 
     }
     
-
+ 
     
 }

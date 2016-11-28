@@ -1,5 +1,5 @@
 //
-//  VisitorSky.swift
+//  VisitorKhaki.swift
 //  FlickrClient
 //
 //  Created by  Yury_apple_mini on 10/15/16.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class VisitorSkinSky: VisitorProtocol {
+class VisitorSkinWood: VisitorProtocol {
 
     /// Reuse identifier for CollectionViewCell SearchViewController.
-    private let reuseIdentifierCell = "FlickrCellForSearchAluminium"
+    private let reuseIdentifierCell = "FlickrCellForSearchWood"
     
-   private  let  image = UIImage(named: "Aluminium.png")
-   private  let  imageSize = UIImage(named: "OriginalSizeAluminium.png")
-    
+    let  image = UIImage(named: "Wood.png")
+    let  imageSize = UIImage(named: "OriginalSizeWood.png")
+ 
     
     func visitNavigationBar (currentNavigationBar : UINavigationBar) {
         currentNavigationBar.setBackgroundImage(image, forBarMetrics: .Default)
@@ -27,10 +27,10 @@ class VisitorSkinSky: VisitorProtocol {
         currentTabBar.backgroundImage = image
     }
     
-    func visitImageSize (inout currentImageView : UIImage , inout reuseIdentifier : String) {
+    func visitImageSize (inout currentImageView : UIImage, inout reuseIdentifier : String) {
         currentImageView = imageSize!
-        reuseIdentifier = reuseIdentifierCell
+          reuseIdentifier = reuseIdentifierCell
     }
-    
-    
 }
+
+
